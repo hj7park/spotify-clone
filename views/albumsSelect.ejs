@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spotify albums</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= album.name %></h1>
+    <p>Artist : <%= album.artist%></p>
+    <p>Description : <%= album.description%></p>
+    <p><a href="./<%= album.id %>/tracks">Track List : </a><% album.tracks.forEach(function(track){ %>
+      <li><%= track.name %></li>
+    <%})%></p>
+    <button><a href="./<%= album.id %>/submit">ADD TRACK</a></button>
+  </body>
+</html>
