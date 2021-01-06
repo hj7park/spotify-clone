@@ -8,8 +8,17 @@
     <h1>Albums</h1>
     <p>Welcome to albums</p>
     <% albums.forEach(function(album){ %>
-      <p><a href="/albums/<%=album.id%>">  <%= album.name %> - <%= album.artist %></a></p>
+      <p>
+        <a href="/albums/<%=album.id%>">  <%= album.name %> - <%= album.artist %></a>
+        <form action="/albums/<%=album.id%>?_method=DELETE"
+          class="delete-form" method="POST">
+        <button type="submit">X</button>
+        </form>
+      </p>
     <%}) %>
+    
     <button><a href="/submit">ADD ALBUM</a></button>
   </body>
-</html>
+
+
+  </html>

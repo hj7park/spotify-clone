@@ -31,6 +31,11 @@ function submitTrackForm(req, res, next) {
     res.redirect("./tracks");
 }
 
+function deleteAlbum(req,res,next){
+    importAlbum.deleteAlbum(req.params.aid);
+    res.redirect("/albums");
+}
+
 
 module.exports={
     showAlbum,
@@ -38,5 +43,6 @@ module.exports={
     showTrack,
     selectTrack,
     submitTrack,
-    submitTrackForm
+    submitTrackForm,
+    deleteAlbum
 }

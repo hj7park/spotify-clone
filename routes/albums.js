@@ -18,4 +18,8 @@ router.get('/:aid/submit', importCtrl.submitTrack);
 
 router.post('/:aid/submit-form', importCtrl.submitTrackForm);
 
+
+//delete albums
+router.delete("/:aid", importCtrl.deleteAlbum);
+
 module.exports = router;

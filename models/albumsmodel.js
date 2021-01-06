@@ -45,11 +45,17 @@ function addTrack(aid,trackName){
     });
 }
 
+function deleteAlbum(inputID){
+    const ind = albumsArray.findIndex(album => album.id == inputID);
+    albumsArray.splice(ind,1);
+}
+
 
 module.exports ={
     albumsArray,
     findAlbum,
     findTrack,
     addAlbum,
-    addTrack
+    addTrack,
+    deleteAlbum
 };
